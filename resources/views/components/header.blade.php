@@ -2,7 +2,7 @@
     <div class="container">
         <a href="" class="navbar-brand">{{env("APP_NAME")}}</a>
 
-        <form action="" class="d-flex">
+        <form action="{{ url('search') }}" method="get" class="d-flex">
             <input type="text" name="search" class="for-control">
             <input type="submit" name="find" class="btn btn-dark">
         </form>

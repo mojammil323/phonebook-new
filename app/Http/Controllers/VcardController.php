@@ -33,4 +33,11 @@ class VcardController extends Controller
         
         return redirect("/");
     }
+
+    public function search (Request $request){
+        $searchData = Vcard::where('name','like',"%$request->search%")->get();
+        return view("index", compact("searchData"));
+        
+        
+    }
 }
